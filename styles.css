@@ -1,0 +1,14 @@
+ body {
+    background-color: black;
+}
+ div {
+     height: 100px;
+     width: 100px;
+     border: lightgray solid 2px;
+     border-radius: 25px;
+     background-color: white;
+     float: right;
+     text-align: center;
+     font-size: 30px;
+     padding: 3px 0;
+ }
