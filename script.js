@@ -10,22 +10,23 @@ document.addEventListener('DOMContentLoaded', function(){
 
     document.getElementById("diemaker").addEventListener("click", function(){ 
        var newdie = new Dice();
-       dicearray.push(newdie);     
+       dicearray.push(newdie); 
+       console.log(dicearray)    
     });
     
     Dice.prototype.reroll = function (){
+            this.roll = Math.floor(Math.random() * ((6 - 1) + 1) + 1);
             this.div.innerHTML = this.roll;
         }
 
     document.getElementById("reroll").addEventListener("click", function(){
-        var again = 
-        again.reroll(); 
+        dicearray.forEach(function(again){
+        again.reroll();
+        });
     });
-
-    document.getElementById("sumDice").addEventListener("click", function(){
-       // var add = dicearray.join('+');
-       // console.log(add);
-       // var sum = eval(add)
-       // alert(sum);
-    });
+    /*document.getElementById("sumDice").addEventListener("click", function(){
+        });
+    document.getElementsByClassName("dice").addEventListener("click", function(){
+       again.reroll();
+    });*/
 });
